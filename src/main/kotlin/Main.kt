@@ -5,8 +5,12 @@ fun main(){
     println("$HERO_NAME announces her presence to the world.")
 
     println("What level is $HERO_NAME?")
-    playerLevel = readLine()!!.toInt()
-
+    val playerLevelInput = readLine()!!
+    playerLevel = if(playerLevelInput.matches("""\d+""".toRegex())){
+        playerLevelInput.toInt()
+    } else {
+        1
+    }
     println("$HERO_NAME's level is $playerLevel")
 
     readBountyBoard()
