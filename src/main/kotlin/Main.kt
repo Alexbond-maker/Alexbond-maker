@@ -17,8 +17,10 @@ fun main(){
     readBountyBoard()
 }
 private fun readBountyBoard(){
-    println("$HERO_NAME approaches in the bounty-board. It reads:")
-    println("\t\"${obtainQuest(playerLevel)}\"")
+    println("""
+        $HERO_NAME approaches in the bounty-board. It reads:
+                "${obtainQuest(playerLevel)}
+    """.trimIndent())
 }
 private fun obtainQuest(
     playerLevel: Int,
