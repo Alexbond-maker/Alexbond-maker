@@ -4,10 +4,10 @@ fun main(){
 
     println("$HERO_NAME announces her presence to the world.")
 
-    println(HERO_NAME)
+    println("What level is $HERO_NAME?")
+    val input = readLine()
 
-
-    println(playerLevel)
+    println("$HERO_NAME's level is $input")
 
     readBountyBoard()
     println("Time passes...")
