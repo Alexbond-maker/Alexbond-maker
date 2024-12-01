@@ -23,7 +23,7 @@ fun main(){
 private fun readBountyBoard(){
     println("""
         $HERO_NAME approaches in the bounty-board. It reads:
-                "${obtainQuest(playerLevel)}
+                "${obtainQuest(playerLevel).replace("Nogartse", "xxxxxxx")}
     """.trimIndent())
 }
 private fun obtainQuest(
