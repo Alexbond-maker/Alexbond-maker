@@ -1,13 +1,13 @@
 const val HERO_NAME = "Madrigal"
-var playerLevel = 5
+var playerLevel = 0
 fun main(){
 
     println("$HERO_NAME announces her presence to the world.")
 
     println("What level is $HERO_NAME?")
-    val input = readLine()
+    playerLevel = readLine()!!.toInt()
 
-    println("$HERO_NAME's level is $input")
+    println("$HERO_NAME's level is $playerLevel")
 
     readBountyBoard()
     println("Time passes...")
