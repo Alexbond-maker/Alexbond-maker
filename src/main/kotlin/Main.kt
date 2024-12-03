@@ -21,9 +21,10 @@ fun main(){
     readBountyBoard()
 }
 private fun readBountyBoard(){
+    val quest :String? = obtainQuest(playerLevel)
     println("""
         $HERO_NAME approaches in the bounty-board. It reads:
-                "${obtainQuest(playerLevel)}
+                "$quest"
     """.trimIndent())
 }
 private fun obtainQuest(
