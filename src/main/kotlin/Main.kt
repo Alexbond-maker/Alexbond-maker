@@ -23,9 +23,8 @@ fun main(){
 private fun readBountyBoard(){
 
     val quest :String? = obtainQuest(playerLevel)
-    if(quest != null) {
-        val censoredQuest: String = quest.replace("Nogartse", "xxxxxxx")
-
+    val censoredQuest: String? = quest?.replace("Nogartse", "xxxxxxx")
+    if(censoredQuest != null) {
         println(
             """
         $HERO_NAME approaches in the bounty-board. It reads:
