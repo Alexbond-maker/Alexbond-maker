@@ -29,7 +29,7 @@ private fun readBountyBoard(){
         $HERO_NAME approaches in the bounty-board. It reads:
                 "$censoredQuest"
     """.trimIndent()
-        }
+        } ?: "$HERO_NAME approaches in the bounty-board, but it is blank"
     println(message)
 }
 private fun obtainQuest(
