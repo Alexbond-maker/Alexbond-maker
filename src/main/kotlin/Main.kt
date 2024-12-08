@@ -30,6 +30,7 @@ private fun readBountyBoard(){
                 "$censoredQuest"
     """.trimIndent()
         }
+    println(message)
 }
 private fun obtainQuest(
     playerLevel: Int,
