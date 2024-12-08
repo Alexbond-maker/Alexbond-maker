@@ -23,15 +23,13 @@ fun main(){
 private fun readBountyBoard(){
 
     val quest :String? = obtainQuest(playerLevel)
-    val censoredQuest: String? = quest?.replace("Nogartse", "xxxxxxx")
-    if(censoredQuest != null) {
-        println(
-            """
+    val message: String? = quest?.replace("Nogartse", "xxxxxxx")
+        ?.let {
+                censoredQuest -> """
         $HERO_NAME approaches in the bounty-board. It reads:
                 "$censoredQuest"
     """.trimIndent()
-        )
-    }
+        }
 }
 private fun obtainQuest(
     playerLevel: Int,
