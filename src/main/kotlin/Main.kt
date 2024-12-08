@@ -5,12 +5,8 @@ fun main(){
     println("$HERO_NAME announces her presence to the world.")
 
     println("What level is $HERO_NAME?")
-    val playerLevelInput = readLine()!!
-    playerLevel = if(playerLevelInput.matches("""\d+""".toRegex())){
-        playerLevelInput.toInt()
-    } else {
-        1
-    }
+
+    playerLevel = readLine()?.toIntOrNull() ?: 0
     println("$HERO_NAME's level is $playerLevel")
 
     readBountyBoard()
@@ -23,7 +19,7 @@ fun main(){
 private fun readBountyBoard(){
 
     val quest :String? = obtainQuest(playerLevel)
-    val message: String? = quest?.replace("Nogartse", "xxxxxxx")
+    val message: String = quest?.replace("Nogartse", "xxxxxxx")
         ?.let {
                 censoredQuest -> """
         $HERO_NAME approaches in the bounty-board. It reads:
