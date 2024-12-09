@@ -34,7 +34,11 @@ private fun obtainQuest(
     hasBefriendedBarbarians: Boolean = true,
     hasAngeredBarbarians: Boolean = false
 
-):String? = when (playerLevel) {
+):String? {
+    if(playerLevel <= 0){
+        throw IllegalArgumentException("The player's level must be at least 1.")
+    }
+    return when (playerLevel) {
         1 -> "Meet Mr. Bubbles in the land of soft things."
         in 1..5 -> {
             val canTalkToBarbarians = !hasAngeredBarbarians && (hasBefriendedBarbarians || playerClass == "barbarian")
@@ -52,3 +56,4 @@ private fun obtainQuest(
         8 -> "Defeat Nogartse, bringer of death and eater of worlds."
         else -> null
     }
+}
