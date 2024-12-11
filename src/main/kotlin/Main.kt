@@ -6,7 +6,10 @@ fun main(){
 
     println("What level is $HERO_NAME?")
 
-    playerLevel = readLine()?.toIntOrNull() ?: 0
+    val input:String = checkNotNull(readLine()){
+        "No input was provided"
+    }
+    playerLevel = input.toIntOrNull() ?: 0
     println("$HERO_NAME's level is $playerLevel")
 
     readBountyBoard()
