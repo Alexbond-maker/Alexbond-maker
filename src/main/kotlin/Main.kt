@@ -63,4 +63,6 @@ private fun obtainQuest(
         8 -> "Defeat Nogartse, bringer of death and eater of worlds."
         else -> null
     }
+
+    class InvalidPlayerLevelException() : IllegalArgumentException("Invalid player level (must be at least 1.)")
 }
